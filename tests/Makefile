@@ -52,11 +52,11 @@ PORT = /dev/ttyACM0
 #     $(INSTALL_DIR)/hardware/boards.txt
 #     (arduino-0022/hardware/arduino/boards.txt)
 # The values below are for the "Arduino Duemilanove or Nano w/ ATmega328"
-# now for "__VERSION__"
-UPLOAD_SPEED = __SPEED__ 
-UPLOAD_PROTOCOL = __PROTOCOL__
-BUILD_MCU = __MCU__
-BUILD_F_CPU = __F_CPU__
+# now for "uno"
+UPLOAD_SPEED = 115200 
+UPLOAD_PROTOCOL = stk500
+BUILD_MCU = atmega328p
+BUILD_F_CPU = 16000000L
 
 # getting undefined reference to `__cxa_pure_virtual'
 #~ [http://www.arduino.cc/cgi-bin/yabb2/YaBB.pl?num=1254180518 Arduino Forum - Makefile]
