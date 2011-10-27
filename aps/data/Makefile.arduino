@@ -44,7 +44,7 @@
 TARGET = $(notdir $(CURDIR))
 # CHANGE BELOW:
 #~ INSTALL_DIR = /Applications/Arduino.app/Contents/Resources/Java
-INSTALL_DIR = /home/diego/applications/arduino-0022
+INSTALL_DIR = __ARDUINO_SDK_PATH__
 #~ PORT = /dev/cu.usbserial*
 PORT = /dev/ttyACM0
 

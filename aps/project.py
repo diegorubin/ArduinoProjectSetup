@@ -27,14 +27,14 @@ class Project():
     def generate(self):
         result = True
 
-        #try:
-        # Create directory project
-        mkdir(self.__destiny__)
+        try:
+            # Create directory project
+            mkdir(self.__destiny__)
 
-        self.__copy_template_pde__()
-        self.__generate_makefile__()
+            self.__copy_template_pde__()
+            self.__generate_makefile__()
 
-        #except:
-        #    result = False
+        except:
+            result = False
 
         return result

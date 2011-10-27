@@ -37,7 +37,8 @@ class Makefile():
         datapath = abspath(join(dirname(__file__), 'data'))
         raw_makefile = open(datapath + "/Makefile.arduino",'r').read()
 
-        new_content = raw_makefile.replace("__VERSION__",self.__version__)
+        new_content = raw_makefile.replace("__ARDUINO_SDK_PATH__",self.__arduino_sdk_path__)
+        new_content = new_content.replace("__VERSION__",self.__version__)
         for attr in Makefile.MAKEFILE_ATTRIBUTES:
             new_content = new_content.replace("__%s__"%attr.upper(),getattr(self,attr))
         
