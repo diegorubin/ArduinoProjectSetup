@@ -12,7 +12,8 @@ setup(
 
     include_package_data = True,
     package_data = {
-        'aps': ['data/Makefile.arduino'],
+        'aps': ['data/Makefile.arduino',
+                'data/template.pde'],
     },
 
     packages=find_packages()

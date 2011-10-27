@@ -25,10 +25,11 @@ if sys.argv[1] == "setsdk":
     conf.write(path)
 elif sys.argv[1] == "new":
     path = sys.argv[2]
+    version = sys.argv[3]
 
     if exists(conf_path):
         conf = open(conf_path,'r')
-        p = Project(path,conf.read())
+        p = Project(path,conf.read(), version)
         p.generate()
     else:
         print 'Primeiro set o caminho do Arduido SDK'

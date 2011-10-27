@@ -16,11 +16,12 @@ except ImportError:
 class test_base(unittest.TestCase):
 
     def test_generate_directory_project(self):
-        project = Project("exemplo", "arduino-sdk")
+        project = Project("exemplo", "arduino-sdk", "uno")
         self.assertEqual(project.generate(), True)
         self.assertEqual(exists("exemplo/exemplo.pde"), True)
         try:
-            rmtree("exemplo")
+            pass
+            #rmtree("exemplo")
         except:
             pass
 
